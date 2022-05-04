@@ -13,28 +13,20 @@
 
 <body>
     <main>
-        <div id="loader-holder">
-            <div class="loader-spinner"></div>
-            <div>
-                <center><small>Please wait...</small></center>
-            </div>
-        </div>
+        
         <h1 id="app-title">Loan Calculator using NW.js Framework</h1>
         <div id="form-holder">
             <div id="main-box">
-                <form action="" id="calculate-loan-form">
+                <form action="" id="calculate-bill">
                     <div class="form-item">
-                        <label for="loan-amount"><b>Enter Loan Amount</b></label>
-                        <input type="number" step="any" min="0" name="loan-amount" id="loan-amount" placeholder="xxxxx" class="input-item text-right" required>
+                        <label for="units-amount"><b>Enter the number of units</b></label>
+                        <input type="number" step="any" min="0" name="units-amount" id="units-amount" placeholder="xxxxx" class="input-item text-right" required>
                     </div>
                     <div class="form-item">
-                        <label for="loan-interest"><b>Enter Loan Interest</b> <small>(%)</small></label>
-                        <input type="number" step="any" name="loan-interest" id="loan-interest" placeholder="x" class="input-item text-right" required>
+                        <label for="billing-period"><b>Enter the billing period</b> <small>(%)</small></label>
+                        <input type="number" step="any" name=" billing-period" id=" billing-period" placeholder="x" class="input-item text-right" required>
                     </div>
-                    <div class="form-item">
-                        <label for="loan-years"><b>Years to Pay</b></label>
-                        <input type="number" step="any" min="1" name="loan-years" id="loan-years" placeholder="x" class="input-item text-right" required>
-                    </div>
+                    
                     <div class="form-item">
                         <button class="btn-block" id="calculate-btn" type="submit">Calucate</button>
                         <button class="btn-block" id="reset-btn" type="reset">Reset</button>
@@ -47,28 +39,21 @@
                     </colgroup>
                     <tbody>
                         <tr>
-                            <td class=""><b>Principal</b></td>
-                            <td class="text-right" id="principal"></td>
+                            <td class=""><b>Number of Units</b></td>
+                            <td class="text-right" id="units"></td>
                         </tr>
                         <tr>
-                            <td class=""><b>Annual Rate</b></td>
-                            <td class="text-right" id="annual-interest"></td>
+                            <td class=""><b>Billing Period</b></td>
+                            <td class="text-right" id="bill-days"></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class=""><b>Amount of Bill without VAT</b></td>
+                            <td class="text-right" id="amount-without-vat"></td>
                         </tr>
                         <tr>
-                            <td class=""><b>Loan Terms</b></td>
-                            <td class="text-right" id="loan-terms"></td>
-                        </tr>
-                        <tr>
-                            <td class=""><b>Monthly Payable</b></td>
-                            <td class="text-right" id="monthly-pay"></td>
-                        </tr>
-                        <tr>
-                            <td class=""><b>Total Cost</b></td>
+                            <td class=""><b>Total Cost including VAT</b></td>
                             <td class="text-right" id="total-pay"></td>
-                        </tr>
-                        <tr>
-                            <td class=""><b>Total Interest</b></td>
-                            <td class="text-right" id="total-interest"></td>
                         </tr>
                     </tbody>
                 </table>

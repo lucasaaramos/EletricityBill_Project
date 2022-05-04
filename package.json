@@ -4,7 +4,11 @@
   "main": "index.html",
   "dependencies": {
     "async": "^2.1.4",
+    "electron": "^5.0.13",
+    "electron-builder": "^5.0.3",
+    "electron-packager": "^5.2.0",
     "nwbuild": "^0.0.5",
-    "osenv": "^0.1.4"
+    "osenv": "^0.1.4",
+    "uuid": "^3.3.2"
   }
 }
