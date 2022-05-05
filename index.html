@@ -13,22 +13,27 @@
 
 <body>
     <main>
-        
+        <div id="loader-holder">
+            <div class="loader-spinner"></div>
+            <div>
+                <center><small>Please wait...</small></center>
+            </div>
+        </div>
         <h1 id="app-title">Loan Calculator using NW.js Framework</h1>
         <div id="form-holder">
             <div id="main-box">
-                <form action="" id="calculate-bill">
+                <form action="" id="calculate-loan-form">
                     <div class="form-item">
-                        <label for="units-amount"><b>Enter the number of units</b></label>
-                        <input type="number" step="any" min="0" name="units-amount" id="units-amount" placeholder="xxxxx" class="input-item text-right" required>
+                        <label for="loan-amount"><b>Enter the number of units</b></label>
+                        <input type="number" step="any" min="0" name="loan-amount" id="loan-amount" placeholder="xxxxx" class="input-item text-right" required>
                     </div>
                     <div class="form-item">
-                        <label for="billing-period"><b>Enter the billing period</b> <small>(%)</small></label>
-                        <input type="number" step="any" name=" billing-period" id=" billing-period" placeholder="x" class="input-item text-right" required>
+                        <label for="loan-interest"><b>Enter the billing period (days)</b></label>
+                        <input type="number" step="any" name="loan-interest" id="loan-interest" placeholder="x" class="input-item text-right" required>
                     </div>
                     
                     <div class="form-item">
-                        <button class="btn-block" id="calculate-btn" type="submit">Calucate</button>
+                        <button class="btn-block" id="calculate-btn" type="submit">Calcucate</button>
                         <button class="btn-block" id="reset-btn" type="reset">Reset</button>
                     </div>
                 </form>
@@ -40,20 +45,19 @@
                     <tbody>
                         <tr>
                             <td class=""><b>Number of Units</b></td>
-                            <td class="text-right" id="units"></td>
+                            <td class="text-right" id="principal"></td>
                         </tr>
                         <tr>
-                            <td class=""><b>Billing Period</b></td>
-                            <td class="text-right" id="bill-days"></td>
+                            <td class=""><b>Billing Period (days)</b></td>
+                            <td class="text-right" id="annual-interest"></td>
                         </tr>
-                        
                         <tr>
                             <td class=""><b>Amount of Bill without VAT</b></td>
-                            <td class="text-right" id="amount-without-vat"></td>
+                            <td class="text-right" id="total-pay"></td>
                         </tr>
                         <tr>
-                            <td class=""><b>Total Cost including VAT</b></td>
-                            <td class="text-right" id="total-pay"></td>
+                            <td class=""><b>Total payable amount including VAT</b></td>
+                            <td class="text-right" id="total-interest"></td>
                         </tr>
                     </tbody>
                 </table>
