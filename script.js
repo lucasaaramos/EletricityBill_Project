@@ -19,24 +19,21 @@ window.onload = function() {
         const unitsQtd = document.getElementById('units-amount').value;
         const daysQtd = document.getElementById('billing-period').value;
         
-        var monthly = 0,
-
-
-            vat = 13.5/100,
-		rate = 0.04,
+        var vat = 13.5/100,
+		    rate = 0.04,
             total = 0,
             totalWithoutVar = 0,
             totalWithVar = 0;
         
-totalWithoutVar = (parseFloat(unitsQtd) * (parseFloat(daysQtd) * parseFloat(rate));
+totalWithoutVar = (parseFloat(unitsQtd) * parseFloat(daysQtd) * parseFloat(rate));
 
-totalWithVar = (parseFloat(unitsQtd) * (parseFloat(daysQtd) * parseFloat(rate)) * (parseFloat(vat);
+totalWithVar = (parseFloat(unitsQtd) * (parseFloat(daysQtd) * parseFloat(rate)) * parseFloat(vat));
 
 
 
                 setTimeout(() => {
             document.getElementById('units').textContent = parseFloat(unitsQtd).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
-            document.getElementById('bill-days').textContent = parseFloat(daysQtd).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
+            document.getElementById('bill-days').textContent = parseFloat(daysQtd).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
             
             document.getElementById('amount-without-vat').textContent = parseFloat(totalWithoutVar).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
             document.getElementById('total-pay').textContent = parseFloat(totalWithVar).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
