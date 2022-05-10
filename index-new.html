@@ -20,17 +20,19 @@
                 <center><small>Please wait...</small></center>
             </div>
         </div>
-        <h1 id="app-title">Electricity Bill Calculator using NW.js Framework</h1>
+
+        <div class="logo">
+            <img class="img-logo" src="img/logo.jpg">
+         </div>
+   
         <div id="form-holder">
             <div id="main-box">
                 <form action="" id="calculate-bill-form">
                     <div class="form-item">
-                        <label for="units-amount"><b>Enter the number of units</b></label>
-                        <input type="number" step="any" min="0" name="units-amount" id="units-amount" placeholder="xxxxx" class="input-item text-right" required>
-                    </div>
-                    <div class="form-item">
-                        <label for="days-period"><b>Enter the billing period (days)</b></label>
-                        <input type="number" step="any" name="days-period" id="days-period" placeholder="x" class="input-item text-right" required>
+            
+                        <input type="number" step="any" min="0" name="units-amount" id="units-amount" placeholder="Numbers of units" class="input-item text-right" required>
+                    
+                        <input type="number" step="any" name="days-period" id="days-period" placeholder="Billing period (days)" class="input-item text-right" required>
                     </div>
                     
                     <div class="form-item">
@@ -38,7 +40,7 @@
                         <button class="btn-block" id="reset-btn" type="reset">Reset</button>
                     </div>
                 </form>
-                <table id="result">
+                <table id="result" class="table table-striped table-hover">
                     <colgroup>
                         <col width="50%">
                         <col width="50%">

@@ -4,6 +4,9 @@ body {
     width: 100%;
     padding: 0!important;
     margin: unset;
+    background: rgb(255,111,0);
+background: linear-gradient(118deg, rgba(255,111,0,1) 0%, rgba(242,225,21,1) 100%);
+
 }
 
 body * {
@@ -18,8 +21,30 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: rgb(0, 0, 0);
-    background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(47, 47, 47, 1) 37%, rgba(47, 47, 47, 1) 61%, rgba(0, 0, 0, 1) 100%);
+
+}
+
+.logo {
+    background-color: rgb(255, 255, 255);
+    border: rgb(66, 66, 66) 10px;
+    margin-bottom: -10px;
+    z-index: 10;
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    position: relative;
+
+    box-shadow: 2px 1px 15px 2px rgba(0,0,0,0.18);
+-webkit-box-shadow: 2px 1px 15px 2px rgba(0,0,0,0.18);
+-moz-box-shadow: 2px 1px 15px 2px rgba(0,0,0,0.18);
+  
+}
+
+.img-logo {
+
+    width: 100%;
+    object-fit: cover;
 }
 
 #app-title {
@@ -41,12 +66,12 @@ main {
 }
 
 #main-box {
-    padding: 0.5em 1em;
-    border-radius: 0.5em;
+    padding: 30px;
+    border-radius: 35px;
     width: 40vw;
     min-height: 20vh;
     background-color: white;
-    box-shadow: 0px 5px 24px #d6ecff;
+    box-shadow: 0px 5px 24px #ffffff;
 }
 
 
@@ -54,22 +79,23 @@ main {
 
 .form-item {
     padding: 0.5em 2em;
+    margin-bottom: 50px;
 }
 
-.form-item label {
-    margin-bottom: .5em;
-}
+
 
 .form-item>* {
     display: block;
-    width: 100%;
+    width: 47%;
+    margin-left: 10px;
 }
 
 input.input-item {
-    padding: 0.5em 0.3em;
+    padding: 20px;
+    text-align: start;
     border: 1px solid;
-    border-radius: 0.3rem;
-    border-color: #4444442e;
+    border-color: #cbcbcb2e;
+    float: left;
 }
 
 .text-right {
@@ -86,13 +112,22 @@ form {
 
 .btn-block {
     width: 100%;
+    align-items: center;
+    margin-top: 30px;
     padding: .5rem;
     border-radius: .3rem;
     margin-bottom: .5rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
+
+
 button#calculate-btn {
-    background-color: #57abfb;
+    background: linear-gradient(118deg, rgba(255,111,0,1) 0%, rgba(242,225,21,1) 100%);
+    border-radius: 30px;
+    max-width: 50%;
     font-weight: 700;
     color: #fff;
 }
@@ -113,7 +148,11 @@ button#calculate-btn {
 
 #reset-btn {
     display: none;
-    ;
+    background: linear-gradient(118deg, rgb(187, 187, 187) 0%, rgb(122, 122, 122) 100%);
+    border-radius: 30px;
+    max-width: 50%;
+    font-weight: 700;
+    color: #fff;
 }
 
 #result {
@@ -125,9 +164,8 @@ button#calculate-btn {
 #result th,
 #result tr,
 #result td {
-    border: 1px solid;
-    border-color: #4444442e;
     padding: .3rem .5rem;
+    font-size: 12px;
 }
 
 

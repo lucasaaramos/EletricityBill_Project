@@ -31,9 +31,9 @@ window.onload = function() {
         
         setTimeout(() => {
             document.getElementById('unitsNumb').textContent = parseFloat(unitsAmount).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
-            document.getElementById('billDays').textContent = parseFloat(billingDays).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
-            document.getElementById('total-pay-without-vat').textContent = parseFloat(amountWithoutVat).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
-            document.getElementById('total-pay-with-vat').textContent = parseFloat(amountWithVat).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
+            document.getElementById('billDays').textContent =  parseFloat(billingDays).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 });
+            document.getElementById('total-pay-without-vat').textContent = "€ " + parseFloat(amountWithoutVat).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
+            document.getElementById('total-pay-with-vat').textContent = "€ " + parseFloat(amountWithVat).toLocaleString("en-US", { style: "decimal", maximumFractionDigits: 2 })
             
             document.getElementById('result').style.display = 'table';
             document.getElementById('reset-btn').style.display = 'block';
@@ -46,8 +46,8 @@ window.onload = function() {
         setTimeout(() => {
             document.getElementById('unitsNumb').textContent = ""
             document.getElementById('billDays').textContent = ""
-            document.getElementById('total-pay-without-vat').textContent = ""
-            document.getElementById('total-pay-with-vat').textContent = ""
+            document.getElementById('total-pay-without-vat').textContent = " "
+            document.getElementById('total-pay-with-vat').textContent = " "
             document.getElementById('result').style.display = 'none';
             document.getElementById('reset-btn').style.display = 'none';
             end_loader()
