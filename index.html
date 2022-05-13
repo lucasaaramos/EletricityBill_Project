@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Loan Calculator Desktop Application</title>
+    <title>Electricity Bill Calculator Desktop Application</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js"></script>
 </head>
@@ -19,21 +19,21 @@
                 <center><small>Please wait...</small></center>
             </div>
         </div>
-        <h1 id="app-title">Loan Calculator using NW.js Framework</h1>
+        <h1 id="app-title">Electricity Bill Calculator using NW.js Framework</h1>
         <div id="form-holder">
             <div id="main-box">
-                <form action="" id="calculate-loan-form">
+                <form action="" id="calculate-bill-form">
                     <div class="form-item">
-                        <label for="loan-amount"><b>Enter the number of units</b></label>
-                        <input type="number" step="any" min="0" name="loan-amount" id="loan-amount" placeholder="xxxxx" class="input-item text-right" required>
+                        <label for="units-amount"><b>Enter the number of units</b></label>
+                        <input type="number" step="any" min="0" name="units-amount" id="units-amount" placeholder="xxxxx" class="input-item text-right" required>
                     </div>
                     <div class="form-item">
-                        <label for="loan-interest"><b>Enter the billing period (days)</b></label>
-                        <input type="number" step="any" name="loan-interest" id="loan-interest" placeholder="x" class="input-item text-right" required>
+                        <label for="days-period"><b>Enter the billing period (days)</b></label>
+                        <input type="number" step="any" name="days-period" id="days-period" placeholder="x" class="input-item text-right" required>
                     </div>
                     
                     <div class="form-item">
-                        <button class="btn-block" id="calculate-btn" type="submit">Calcucate</button>
+                        <button class="btn-block" id="calculate-btn" type="submit">Calculate</button>
                         <button class="btn-block" id="reset-btn" type="reset">Reset</button>
                     </div>
                 </form>
@@ -45,19 +45,19 @@
                     <tbody>
                         <tr>
                             <td class=""><b>Number of Units</b></td>
-                            <td class="text-right" id="principal"></td>
+                            <td class="text-right" id="unitsNumb"></td>
                         </tr>
                         <tr>
                             <td class=""><b>Billing Period (days)</b></td>
-                            <td class="text-right" id="annual-interest"></td>
+                            <td class="text-right" id="billDays"></td>
                         </tr>
                         <tr>
                             <td class=""><b>Amount of Bill without VAT</b></td>
-                            <td class="text-right" id="total-pay"></td>
+                            <td class="text-right" id="total-pay-without-vat"></td>
                         </tr>
                         <tr>
                             <td class=""><b>Total payable amount including VAT</b></td>
-                            <td class="text-right" id="total-interest"></td>
+                            <td class="text-right" id="total-pay-with-vat"></td>
                         </tr>
                     </tbody>
                 </table>
